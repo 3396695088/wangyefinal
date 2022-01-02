@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>实验3 网页布局</title>
+	<style>	
+	
+	.links {
+		color: red;
+		text-decoration: underline;
+		position: fixed;
+		margin: 50px 50px;
+	}
+	
+	.chao {
+		display: block;
+		color: yellow;
+		position:fixed;
+		margin:0px 0px;
+		z-index: 999;
+		font-style: 宋体;
+		width:70px;
+		height:30px;
+		text-decoration: none;
+	}
+	/*a:hover {
+  		color:black;
+  		text-decoration:none;
+		}
+
+		a:active {
+  		color: white;
+  		text-decoration:none;*/
+	
+	* {
+		width: 400px;
+		height: 700px;
+		background-size: cover;
+		background-image: url("/ex3/res/2/背景.png");
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		/*padding: 0;
+			margin:0 16%;*/
+	}
+	
+	#cener {
+		display: block;
+		margin: 100px auto;
+		width: 400;
+		height: 700;
+		overflow: visible;
+	}
+	
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	</style>
+</head>
+
+<body>
+	<script src="js/pixi.min.js"></script>
+	<audio id="mu1">
+		<source src="res/2/Alan Silvestri - Forrest Gump Suite.mp3" type="audio/mp3"></source>
+
+	</audio>
+	<audio id="mu2">
+		<source src="res/4/Howard Shore - Concerning Hobbits.mp3" type="audio/mp3"></source>
+	</audio>
+	
+	<div id="cener">
+		<script>
+			//var c = document.querySelector("canvas");
+	var mu1=document.querySelector("#mu1");
+	var mu2=document.querySelector("#mu2");
+	var app=new PIXI.Application(400,
+	700);
+	document.body.appendChild(app.view);
+	var bg2=new PIXI.Sprite.fromImage("res/3/背景.png");
+	bg2.width=400;
+	bg2.height=700;
+	app.stage.addChild(bg2);
+	var man=new PIXI.Sprite.fromImage("res/3/人物主体.png");
+	man.width=400;
+	man.height=700;
+	app.stage.addChild(man);
+	var plume1=new PIXI.Sprite.fromImage("res/3/羽毛1.png");
+	var plume2=new PIXI.Sprite.fromImage("res/3/羽毛2.png");
+	var plume3=new PIXI.Sprite.fromImage("res/3/羽毛3.png");
+	plume1.width=400;
+	plume1.height=700;
+	plume2.width=400;
+	plume2.height=700;
+	plume3.width=400;
+	plume3.height=700;
+	app.stage.addChild(plume1,
+	plume2,
+	plume3);
+	var word1=new PIXI.Sprite.fromImage("res/3/文字1.png");
+	var word2=new PIXI.Sprite.fromImage("res/3/文字2.png");
+	var word3=new PIXI.Sprite.fromImage("res/3/文字3.png");
+	var word4=new PIXI.Sprite.fromImage("res/3/文字4.png");
+	word1.width=400;
+	word1.height=700;
+	word2.width=400;
+	word2.height=700;
+	word3.width=400;
+	word3.height=700;
+	word4.width=400;
+	word4.height=700;
+	bg2.interactive=true;
+	bg2.on("click",
+	contnue);
+	var s=0;
+	function contnue() {
+		s+=1;
+		if(s==1) {
+			app.stage.addChild(word1);
+		}
+		else if(s==2) {
+			app.stage.addChild(word2);
+		}
+		else if(s==3) {
+			app.stage.addChild(word3);
+		}
+		else if(s==4) {
+			app.stage.addChild(word4);
+		}
+		else {
+			self.location="indx3.html";
+		}
+	}
+						/*var bg3=new PIXI.Sprite.fromImage("res/3/baomihua.jpg");
+					bg3.width=400;
+					bg3.height=700;
+					app.stage.addChild(bg3);
+					var last=new PIXI.Text("谢谢！");
+					last.x=200;
+					last.y=200;
+					app.stage.addChild(last);*/
+
+	/*var bg2=new PIXI.Sprite.fromImage("res/3/背景.png");
+			bg2.width=400;
+			bg2.height=700;
+			app.stage.addChild(bg2);
+			var man=new PIXI.Sprite.fromImage("res/3/人物主体.png");
+			man.width=400;
+			man.height=700;
+			app.stage.addChild(man);*/
+	
+	</script></div></body></html>

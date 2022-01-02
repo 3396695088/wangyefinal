@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>进入</title>
+<meta charset="utf-8" />
+<style type="text/css">
+*{
+	margin: 0 auto;
+	padding: 0;
+	width: 400px;
+	height: 800px;
+	overflow: hidden;
+}
+	
+
+.view_box div{
+    width:400px;
+  	height:700px;
+  	margin: 0px auto;
+  	text-align:center;
+  	line-height:300px;
+  	font-size:50px;
+  	position:relative;
+  	
+
+}
+.img1{
+	position: absolute;
+	top: 10px;
+	
+	z-index:1;
+	margin: 0px auto;
+	animation:moveDiv 2s linear 1;
+}
+@keyframes moveDiv {
+
+                0%{top:-400px;}
+
+                25%{ top:-300px;}
+
+                50%{ top:-200px;}
+
+                75%{top:-100px;}
+
+                100%{ top:-10;}
+
+        }
+.img2{
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	z-index:2;
+	margin: 0px auto;
+	animation:move1Div 2s linear 1;
+}
+@keyframes move1Div {
+
+                0%{top:-400px;}
+
+                25%{ top:-300px;}
+
+                50%{ top:-200px;}
+
+                75%{top:-100px;}
+
+                100%{ top:10;}
+
+        }
+.img3{
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	z-index:3;
+	margin: 0px auto;
+	animation:move2Div 4s linear 1;
+}
+@keyframes move2Div {
+
+                0%{opacity: 0;}
+
+                25%{opacity: 0;}
+
+                50%{opacity: 0.1;}
+
+                75%{opacity: 0.75;}
+
+                100%{opacity: 1;}
+
+        }
+.img4{
+	position: absolute;
+	top: -120px;
+	left: 0px;
+	z-index:4;
+	margin: 0px auto;
+	overflow: hidden;
+	animation:move2Div 4s linear 1;
+}
+p{
+	text-align: center;
+    margin-top:10px;
+    line-height: 30px;
+}
+</style>
+    
+<script type="text/javascript">
+      
+      function enter(){
+      	window.location.href="indx2.html";
+      }
+    </script>
+    
+</head>
+<body>
+	<div class="view_box" onclick="enter()">
+		<img  class="img1" src="res/page3/第三页底图.jpg" style="width: 400px; height: 700px;"/>
+			<div><img class="img2" src="res/page3/轮子主体.png" style="width: 400px; height: 700px;"/>
+				<div><img class="img3" src="res/page3/轮子1.png" style="width: 400px; height: 700px;"/>
+					<div><img class="img3" src="res/page3/轮子2.png" style="width: 400px; height: 700px;"/>
+						<div><img class="img3" src="res/page3/光效.png" style="width: 400px; height: 700px;"/>
+							<div><img class="img4" src="res/page3/第三页小电视.png" style="width: 400px; height: 700px;"/>
+								<div><img class="img4" src="res/page3/第三页电影小组件.png" style="width: 400px; height: 700px;"/>
+									<img class="img3" src="res/page3/第三页数据组件.png" style="width: 400px; height: 700px;"/>
+									<img class="img3" src="res/page3/第三页午后.png" style="width: 400px; height: 700px;"/>
+									<img class="img4" src="res/page3/第三页文字1.png" style="width: 400px; height: 700px;"/>
+									<img class="img3" src="res/page3/第三页文字2.png" style="width: 400px; height: 700px;"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+	</div>
+		<!--</div>
+		<p><a href="index.html">返回首页</a></p>
+	</div>-->
+	
+	
+    
+	
+    
+</body>
+</html>
